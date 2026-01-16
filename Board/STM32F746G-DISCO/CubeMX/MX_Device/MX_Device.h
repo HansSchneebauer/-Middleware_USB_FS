@@ -1,6 +1,6 @@
 /******************************************************************************
  * File Name   : MX_Device.h
- * Date        : 24/07/2025 19:32:23
+ * Date        : 16/01/2026 18:45:28
  * Description : STM32Cube MX parameter definitions
  * Note        : This file is generated with a generator out of the
  *               STM32CubeMX project and its generated files (DO NOT EDIT!)
@@ -24,7 +24,7 @@
 #define MX_ETH_CRS_DV_GPIOx                     GPIOA
 #define MX_ETH_CRS_DV_GPIO_Mode                 GPIO_MODE_AF_PP
 #define MX_ETH_CRS_DV_GPIO_PuPd                 GPIO_NOPULL
-#define MX_ETH_CRS_DV_GPIO_Speed                GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_CRS_DV_GPIO_Speed                GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_CRS_DV_GPIO_AF                   GPIO_AF11_ETH
 
 /* ETH_MDC */
@@ -33,7 +33,7 @@
 #define MX_ETH_MDC_GPIOx                        GPIOC
 #define MX_ETH_MDC_GPIO_Mode                    GPIO_MODE_AF_PP
 #define MX_ETH_MDC_GPIO_PuPd                    GPIO_NOPULL
-#define MX_ETH_MDC_GPIO_Speed                   GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_MDC_GPIO_Speed                   GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_MDC_GPIO_AF                      GPIO_AF11_ETH
 
 /* ETH_MDIO */
@@ -42,7 +42,7 @@
 #define MX_ETH_MDIO_GPIOx                       GPIOA
 #define MX_ETH_MDIO_GPIO_Mode                   GPIO_MODE_AF_PP
 #define MX_ETH_MDIO_GPIO_PuPd                   GPIO_NOPULL
-#define MX_ETH_MDIO_GPIO_Speed                  GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_MDIO_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_MDIO_GPIO_AF                     GPIO_AF11_ETH
 
 /* ETH_REF_CLK */
@@ -51,7 +51,7 @@
 #define MX_ETH_REF_CLK_GPIOx                    GPIOA
 #define MX_ETH_REF_CLK_GPIO_Mode                GPIO_MODE_AF_PP
 #define MX_ETH_REF_CLK_GPIO_PuPd                GPIO_NOPULL
-#define MX_ETH_REF_CLK_GPIO_Speed               GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_REF_CLK_GPIO_Speed               GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_REF_CLK_GPIO_AF                  GPIO_AF11_ETH
 
 /* ETH_RXD0 */
@@ -60,7 +60,7 @@
 #define MX_ETH_RXD0_GPIOx                       GPIOC
 #define MX_ETH_RXD0_GPIO_Mode                   GPIO_MODE_AF_PP
 #define MX_ETH_RXD0_GPIO_PuPd                   GPIO_NOPULL
-#define MX_ETH_RXD0_GPIO_Speed                  GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_RXD0_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_RXD0_GPIO_AF                     GPIO_AF11_ETH
 
 /* ETH_RXD1 */
@@ -69,7 +69,7 @@
 #define MX_ETH_RXD1_GPIOx                       GPIOC
 #define MX_ETH_RXD1_GPIO_Mode                   GPIO_MODE_AF_PP
 #define MX_ETH_RXD1_GPIO_PuPd                   GPIO_NOPULL
-#define MX_ETH_RXD1_GPIO_Speed                  GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_RXD1_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_RXD1_GPIO_AF                     GPIO_AF11_ETH
 
 /* ETH_TXD0 */
@@ -78,7 +78,7 @@
 #define MX_ETH_TXD0_GPIOx                       GPIOG
 #define MX_ETH_TXD0_GPIO_Mode                   GPIO_MODE_AF_PP
 #define MX_ETH_TXD0_GPIO_PuPd                   GPIO_NOPULL
-#define MX_ETH_TXD0_GPIO_Speed                  GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_TXD0_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_TXD0_GPIO_AF                     GPIO_AF11_ETH
 
 /* ETH_TXD1 */
@@ -87,7 +87,7 @@
 #define MX_ETH_TXD1_GPIOx                       GPIOG
 #define MX_ETH_TXD1_GPIO_Mode                   GPIO_MODE_AF_PP
 #define MX_ETH_TXD1_GPIO_PuPd                   GPIO_NOPULL
-#define MX_ETH_TXD1_GPIO_Speed                  GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_TXD1_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_TXD1_GPIO_AF                     GPIO_AF11_ETH
 
 /* ETH_TX_EN */
@@ -96,7 +96,7 @@
 #define MX_ETH_TX_EN_GPIOx                      GPIOG
 #define MX_ETH_TX_EN_GPIO_Mode                  GPIO_MODE_AF_PP
 #define MX_ETH_TX_EN_GPIO_PuPd                  GPIO_NOPULL
-#define MX_ETH_TX_EN_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_ETH_TX_EN_GPIO_Speed                 GPIO_SPEED_FREQ_HIGH
 #define MX_ETH_TX_EN_GPIO_AF                    GPIO_AF11_ETH
 
 /*------------------------------ I2C1           -----------------------------*/

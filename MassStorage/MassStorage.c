@@ -14,8 +14,11 @@
 
 #include "rl_usb.h"
 #include "rl_fs.h"
-#include "cmsis_vio.h" 
+#include "cmsis_vio.h"
 #include "USBD_MSC_0.h"
+
+// ADC handle is CubeMX-generated (typically in Board/.../CubeMX/.../Src/main.c)
+extern ADC_HandleTypeDef hadc1;
 
 // Main stack size must be multiple of 8 Bytes
 #define APP_MAIN_STK_SZ (4096U)
@@ -24,6 +27,33 @@ static const osThreadAttr_t app_main_attr = {
   .stack_mem  = &app_main_stk[0],
   .stack_size = sizeof(app_main_stk)
 };
+
+// ADC thread stack size must be multiple of 8 Bytes
+#define ADC1_MAIN_STK_SZ (1024U)
+static uint64_t adc1_main_stk[ADC1_MAIN_STK_SZ / 8];
+static const osThreadAttr_t adc1_main_attr = {
+  .stack_mem  = &adc1_main_stk[0],
+  .stack_size = sizeof(adc1_main_stk)
+};
+
+/*-----------------------------------------------------------------------------
+ * ADC1 sampling thread (ADC1 regular channel configured for A/D input 0)
+ *----------------------------------------------------------------------------*/
+static void adc1_thread (void *argument) {
+  (void)argument;
+
+  for (;;) {
+    if (HAL_ADC_Start(&hadc1) == HAL_OK) {
+      if (HAL_ADC_PollForConversion(&hadc1, 10U) == HAL_OK) {
+        const uint32_t value = HAL_ADC_GetValue(&hadc1);
+        printf("ADC1_IN0: %lu\r\n", (unsigned long)value);
+      }
+      (void)HAL_ADC_Stop(&hadc1);
+    }
+
+    osDelay(1000U); // 1 second
+  }
+}
 
 /*-----------------------------------------------------------------------------
  * Application main thread
@@ -79,7 +109,10 @@ void app_main_thread (void *argument) {
  *----------------------------------------------------------------------------*/
 int app_main (void) {
   osKernelInitialize();
+
   osThreadNew(app_main_thread, NULL, &app_main_attr);
+  osThreadNew(adc1_thread,     NULL, &adc1_main_attr);
+
   osKernelStart();
   return 0;
 }
